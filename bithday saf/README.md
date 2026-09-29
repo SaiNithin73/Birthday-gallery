@@ -11,7 +11,7 @@ bithday saf/
 ├── css/style.css       the design system + all animation
 ├── js/main.js          all behaviour (CONFIG lives at the top)
 ├── images/             13 photos + the sample placeholders they fall back to
-├── audio/              put song.mp3 here (optional)
+├── audio/              song.mp3 — the background track, 128 kbps / 4.8 MB
 └── README.md           you are here
 ```
 
@@ -132,12 +132,18 @@ If you ever want wording back, add `date:` and `caption:` to a photo in
 The polaroid keeps a blank paper strip under each photo via padding on
 `.polaroid` itself, so removing its caption didn't shrink the frame.
 
-## 3. Add a song
+## 3. The song
 
-Drop any audio file at the path in `CONFIG.music.file` (default
-`audio/song.mp3`). `.mp3` is safest, `.m4a` and `.ogg` also work.
+The background track is `audio/song.mp3` — 5 min 19 s, 128 kbps, 4.8 MB.
+It was re-encoded down from a 320 kbps master (12.2 MB), which is a lot of
+weight for something playing at 35% volume behind a page of text. Duration
+and stereo are unchanged; the difference is inaudible for a soft bed.
 
-The music button is the ♪ in the top-right corner. Browsers won't start
+To swap it, keep the same filename and drop the new file in. If you export
+from a music app, 128 kbps is the sweet spot; `.m4a` and `.ogg` also work
+if you change `CONFIG.music.file` to match.
+
+The music button is the ♪ in the bottom-left corner. Browsers won't start
 audio until you've interacted with the page, so the first tap on it is
 what starts the song — that's normal, not a bug. If the file is missing,
 the site says so instead of failing.
