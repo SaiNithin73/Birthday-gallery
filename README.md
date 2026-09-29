@@ -6,12 +6,13 @@ install. Double-click `index.html` and it works, even offline-ish and even
 straight from a USB stick.
 
 ```
-bithday saf/
+Birthday-gallery/
 ├── index.html          the whole page
 ├── css/style.css       the design system + all animation
 ├── js/main.js          all behaviour (CONFIG lives at the top)
 ├── images/             13 photos + the sample placeholders they fall back to
 ├── audio/              song.mp3 — the background track, 128 kbps / 4.8 MB
+├── .nojekyll           tells GitHub Pages to serve the files as-is
 └── README.md           you are here
 ```
 
@@ -153,8 +154,11 @@ the site says so instead of failing.
 It's a static site, so anywhere that serves files works:
 
 - **Netlify Drop** — go to netlify.com/drop, drag the whole folder in. Done.
-- **GitHub Pages** — push the folder to a repo, then Settings → Pages →
-  deploy from `main` / root.
+- **GitHub Pages** — Settings → Pages → Deploy from a branch, branch
+  `main`, folder `/ (root)`. The site lives at
+  <https://sainithin73.github.io/Birthday-gallery/>. `.nojekyll` is
+  already in the root, so GitHub serves the files as-is instead of
+  running them through Jekyll.
 - **Google Drive / iCloud** — you can also just share the folder and ask
   people to open `index.html`. It works offline, minus the two CDN scripts.
 
